@@ -1,6 +1,6 @@
 # Write a Makefile of using g++ to compile Matrix.cpp, Matrix.hpp _matrix.cpp
 CC = g++ -fopenmp  -mcmodel=medium -march=native
-CFLAGS = -O3 -Wall -shared -std=c++17 -fPIC
+CFLAGS = -O3 -Wall -shared -std=c++17 -fPIC -ltbb
 MKLINCLUDE = -I/usr/include/mkl 
 PYINCLUDE = $(shell python3-config --includes)  $(shell python3 -m pybind11 --includes)
 PYESUFFIX = $(shell python3-config --extension-suffix)
