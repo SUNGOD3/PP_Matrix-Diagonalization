@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+    build:
+        runs-on: ubuntu-22.04
+        steps:
+            - uses: actions/checkout@v2
+            - name: Install dependencies
+              run: |
+                sudo apt-get -q update
+                sudo apt-get -qy install openmpi \
+                sudo apt-get install -y 
+                    curl build-essential make \
+                    gcc g++ intel-mkl-full \
+                    python3 python3-pip python3-pytest \
+                    python3-numpy python3-scipy python3-pandas
+                python3 -m pip install --upgrade pip
+                pip install pytest pytest-cov pybind11
+            - name: Test
+              run: |
+                make test
+                make demo

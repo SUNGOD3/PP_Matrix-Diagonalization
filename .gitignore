@@ -1,0 +1,11 @@
+# OBJ files
+*.o
+
+# Libraries
+*.so
+*.a
+*.dll
+
+# dir
+**/__pycache__
+**/.pytest_cache
