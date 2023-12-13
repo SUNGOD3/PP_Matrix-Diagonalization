@@ -1,5 +1,5 @@
 #include "_eigen.hpp"
-#define thread_num 8
+#define thread_num 4
 std::pair<Matrix, Matrix> QR_decomposition_wrapper(Matrix const& mat, int type)
 {
     if (type == 1) {

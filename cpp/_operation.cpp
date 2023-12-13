@@ -1,6 +1,6 @@
 #include "_operation.hpp"
 //#include <execution> 
-#define thread_num 8
+#define thread_num 4
 
 
 double dot_product(const std::vector<double>& a, const std::vector<double>& b) 
