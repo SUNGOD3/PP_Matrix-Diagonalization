@@ -1,5 +1,5 @@
 #include "_operation.hpp"
-#include <execution> 
+//#include <execution> 
 #define thread_num 16
 
 
@@ -41,7 +41,13 @@ std::vector<double> normalize_p(std::vector<double>& a)
 
 bool is_zero_vector(const std::vector<double>& a) 
 {
-    return std::all_of(std::execution::par, a.begin(), a.end(), [](double x) { return fabs(x) <= EPSILON; });
+    for (size_t i = 0; i < a.size(); i++) {
+        if (a[i] > EPSILON) {
+            return false;
+        }
+    }
+    return true;
+    //return std::all_of(std::execution::par, a.begin(), a.end(), [](double x) { return fabs(x) <= EPSILON; });
 }
 
 std::vector<double> ssdd(const std::vector<double> &a, const std::vector<double> &b, const std::vector<double> &c, const double &cc)
