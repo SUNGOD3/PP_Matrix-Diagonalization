@@ -13,7 +13,7 @@ jobs:
             - name: Install dependencies
               run: |
                 sudo apt-get -q update
-                sudo apt-get -qy install openmpi \
+                sudo apt-get -qy install openmpi-dev \
                 sudo apt-get install -y 
                     curl build-essential make \
                     gcc g++ intel-mkl-full \
