@@ -1,6 +1,6 @@
 #ifndef __MATRIX_HPP__
 #define __MATRIX_HPP__
-#define thread_num 4
+#define thread_num 1
 constexpr double EPSILON = 0.000001;
 
 #include <iostream>
