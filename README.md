@@ -24,4 +24,5 @@ pip install pytest pytest-cov pybind11
 make test # for test
 make demo # for demo
 ```
-
+If you have some error in the build, you can git clone and push to your repo.
+Then the github action will be invoked like https://github.com/SUNGOD3/PP_Matrix-Diagonalization/actions.
