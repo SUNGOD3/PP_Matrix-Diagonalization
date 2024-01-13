@@ -26,3 +26,17 @@ make demo # for demo
 ```
 If you have some error in the build, you can git clone and push to your repo.
 Then the github action will be invoked like https://github.com/SUNGOD3/PP_Matrix-Diagonalization/actions.
+
+# RUN in docker
+
+```
+cd docker
+./env.sh start
+
+make test
+make demo
+```
+
+```
+./env.sh -h # for more infomation
+```
