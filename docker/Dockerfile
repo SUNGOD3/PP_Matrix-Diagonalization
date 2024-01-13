@@ -6,6 +6,7 @@ ARG USERNAME
 RUN useradd -u ${UID} -m ${USERNAME}
 
 RUN apt-get update && apt-get -y upgrade
+RUN apt-get install -y libomp-dev libtbb-dev
 RUN apt-get install -y vim fish git sudo python3 python3-pip
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
